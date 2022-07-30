@@ -1,48 +1,47 @@
 package company;
 public class Main {
+    public static void main(String[] args) {
 
-    public static String TypeOfNumber(int number) {
+// if, else if y else
+        int numeroIf = 0;
 
-        if (number < 0) {
-            return number + " es negativo";
-        } else if (number > 0) {
-            return number + " es positivo";
+        if (numeroIf < 0) {
+            System.out.println("La variable numeroIf " + numeroIf + " es negativo");
+        } else if (numeroIf > 0) {
+            System.out.println("La variable numeroIf " + numeroIf + " es positivo");
+        } else {
+            System.out.println("La variable numeroIf es 0");
         }
-        else {
-            return "es " + number;
-        }
-    }
 
-    public static int Fwhile(int numeroWhile) {
+        //while
+        int numeroWhile = 1;
+
         while (numeroWhile < 3) {
-            System.out.println(numeroWhile);
             numeroWhile++;
+            System.out.println("La variable numeroWhile ahora vale: " + numeroWhile);
         }
-        return numeroWhile;
-    }
-    public static int FDoWhile(int numeroWhile) {
 
+        //do while
+        //Al no cumplirse la condición, solo entra en el bucle una vez
+        int numeroDoWhile = 3;
         do {
-            System.out.println(numeroWhile);
-            numeroWhile++;
-        } while (numeroWhile < 3);
-        return numeroWhile;
-    }
+            numeroDoWhile++;
+            System.out.println("La variable numeroDoWhile ahora vale: " + numeroDoWhile);
+        } while (numeroDoWhile < 3);
 
-    public static int FFor(int numeroFor) {
-
-        for (int i = numeroFor; i < 3; i++) {
-            System.out.println(i);
+        //for
+        for (int numeroFor = 0; numeroFor <= 5; numeroFor++) {
+            System.out.println("La variable numeroFor ahora vale: " + numeroFor);
         }
-        return 3;
-    }
 
-    public static String Estaciones(String estacion) {
-
-        switch (estacion.toLowerCase()) {
-
+        //switch
+        String estacion = "otoño";
+        switch (estacion) {
             case "verano":
                 System.out.println("Estamos en verano");
+                break;
+            case "invierno":
+                System.out.println("Estamos en invierno");
                 break;
             case "primavera":
                 System.out.println("Estamos en primavera");
@@ -50,22 +49,8 @@ public class Main {
             case "otoño":
                 System.out.println("Estamos en otoño");
                 break;
-            case "invierno":
-                System.out.println("Estamos en invierno");
-                break;
             default:
-                System.out.println("El parametro ingresado no es una estacion");
-                break;
+                System.out.println("No es una estación");
         }
-        return "";
-    }
-
-    public static void main(String[] args) {
-
-        System.out.println(TypeOfNumber(6));
-        System.out.println(Fwhile(-5));
-        System.out.println(FDoWhile(-5));
-        System.out.println(FFor(0));
-        System.out.println(Estaciones("verano"));
     }
 }
